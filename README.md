@@ -12,5 +12,5 @@ different contexts
 * Context from a parent context
 ```go
     parent := contect.Background()
-    ctx := traceable_context.WithUUID(parent, uuid.New())
+    ctx := traceable_context.FromContextWithUUID(parent, uuid.New())
 ```
