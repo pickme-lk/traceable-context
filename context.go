@@ -18,6 +18,12 @@ type traceableContext struct {
 	uuid uuid.UUID
 }
 
+// SetPrefix function will set the uuidPrefix to given prefix.
+func SetPrefix(prefix string) {
+	uuidPrefix = prefix
+}
+
+
 func WithCancel(parent context.Context) (ctx TraceableContext, cancel context.CancelFunc) {
 	c, cancel := context.WithCancel(parent)
 	return &traceableContext{
